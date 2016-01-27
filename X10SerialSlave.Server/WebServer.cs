@@ -22,6 +22,8 @@ namespace X10SerialSlave.Server
         {
             _deferral = taskInstance.GetDeferral();
             _x10Controller.Initialize();
+            while(true)
+            { _x10Controller.WriteBytes(new byte[] {0x0});}
             Task.Factory.StartNew(this.InitializeHttpApi, TaskCreationOptions.LongRunning);
         }
 

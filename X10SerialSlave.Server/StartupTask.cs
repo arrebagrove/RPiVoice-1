@@ -8,7 +8,7 @@ namespace X10SerialSlave.Server
         {
             new WebServer(new Rf24Server()).RunAsync(taskInstance);
             //new WebServer(new PSC05Server()).RunAsync(taskInstance);
-            //new WebServer(CM11AServer.GetInstance("COM1")).RunAsync(taskInstance);
+            //new WebServer(CM11AServer.GetInstance()).RunAsync(taskInstance);
         }
     }
 }
